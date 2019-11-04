@@ -100,7 +100,8 @@
   #if TEMP_SENSOR_0 == -1
     #define TEMP_0_PIN      6   // Analog Input (connector *K1* on RUMBA thermocouple ADD ON is used)
   #else
-    #define TEMP_0_PIN     15   // Analog Input (default connector for thermistor *T0* on rumba board is used)
+    #define TEMP_0_PIN     9   // Analog Input (default connector for thermistor *T0* on rumba board is used)
+//this was 15
   #endif
 #endif
 
@@ -134,19 +135,27 @@
 //
 // Heaters / Fans
 //
+//heater 1 was pin 3
 #define HEATER_0_PIN        2
-#define HEATER_1_PIN        3
-#define HEATER_2_PIN        6
+#define HEATER_1_PIN        -1
+#define HEATER_2_PIN        9
 #define HEATER_3_PIN        8
-#define HEATER_BED_PIN      9
-
+#define HEATER_BED_PIN      6
+//heater bed was 9
+//heater 2 was 6
 #ifndef FAN_PIN
-  #define FAN_PIN           7
+  #define FAN_PIN           8
+  //fan pin was 8
 #endif
 #ifndef FAN1_PIN
-  #define FAN1_PIN          8
+  #define FAN1_PIN          -1
 #endif
-
+/*
+#ifndef FAN_PIN
+#define FAN_PIN 8
+#endif
+#define FAN1_PIN 8
+*/
 //
 // Misc. Functions
 //
